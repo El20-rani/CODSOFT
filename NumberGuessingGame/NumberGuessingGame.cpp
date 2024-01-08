@@ -6,26 +6,46 @@ int main()
     srand((unsigned)time(NULL));
     int random_number = rand() % 100 + 1;
     int guessed_no;
-    int counter = 0;
-    while (true)
+    int counter = 7;
+    cout << " Welcome to the number guessing game.\n Remember you only get 7 tries.";
+    while (counter > 0)
     {
-        cout << "Enter your guess (1 to 100):";
+        cout << "\n Enter your guess (1 to 100):\n";
         cin >> guessed_no;
-        counter++;
+        counter--;
         if (guessed_no < random_number)
         {
-            cout << "Your guess is too low. Guess again.\n";
+            if (counter == 0)
+            {
+                cout << "\n Sorry! you have failed to guess correctly within 7 tries.\n The correct number was " << random_number << ".\n";
+            }
+            else
+            {
+                cout << " Your guess is too low. You have " << counter << " tries left. Guess again.\n";
+            }
         }
         else if (guessed_no > random_number)
         {
-            cout << "Your guess is too high. Guess again.\n";
+            if (counter == 0)
+            {
+                cout << "\n Sorry! you have failed to guess correctly within 7 tries.\n The correct number was " << random_number << ".\n";
+            }
+            else
+            {
+                cout << " Your guess is too high. Guess again. You have " << counter << " tries left. Guess again.\n";
+            }
         }
         else
         {
-            cout << "\nYour guess is correct! You got it after " << counter << " tries.\n";
+            cout << "\n Your guess is correct! You got it with " << counter << " tries left\n";
             break;
         }
     }
+
+    // if (counter == 0)
+    // {
+    //     cout << "\n Sorry you have failed to guess correctly in 7 tries.\n The correct number was " << random_number;
+    // }
 
     return 0;
 }
