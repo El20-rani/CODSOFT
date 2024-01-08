@@ -42,10 +42,5 @@ int main()
         }
     }
 
-    // if (counter == 0)
-    // {
-    //     cout << "\n Sorry you have failed to guess correctly in 7 tries.\n The correct number was " << random_number;
-    // }
-
     return 0;
 }
