@@ -28,7 +28,7 @@ int main()
         {
             if (counter == 0)
             {
-                cout << "\n Sorry! you have failed to guess correctly within 7 tries.\n The correct number was " << random_number << ".\n";
+                cout << "\n Sorry!!! you have failed to guess correctly within 7 tries.\n The correct number was " << random_number << ".\n";
             }
             else
             {
@@ -37,7 +37,7 @@ int main()
         }
         else
         {
-            cout << "\n Your guess is correct! You got it with " << counter << " tries left\n";
+            cout << "\n Congrats!!! Your guess is correct! You got it with " << counter << " tries left\n";
             break;
         }
     }
